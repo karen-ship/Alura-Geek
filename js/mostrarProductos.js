@@ -22,11 +22,16 @@ function crearCard(nombre, precio, imagen, id) {
     return producto;
 }
 
-async function listarProductos() {
+export default async function listarProductos() {
     try {
         const listaAPI = await conexionAPI.listarProductos();
         listaAPI.forEach(producto => lista.appendChild(crearCard(producto.nombre, producto.precio, producto.imagen, producto.id)));
-    } catch (error) {
+
+        if (listaAPI.length == 0) {
+            lista.innerHTML = `<h2 class="mensaje__titulo">No se han agregado productos :(</h2>`;
+        }
+
+    }catch (error) {
         lista.innerHTML = `<h2 class="mensaje__titulo">No se han agregado productos :(</h2>`;
     }
 }

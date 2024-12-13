@@ -1,4 +1,5 @@
 import { conexionAPI } from "./conexionAPI.js";
+import listarProductos from "./mostrarProductos.js";
 
 
 async function prueba() {
@@ -9,9 +10,8 @@ async function prueba() {
     imgTrash.forEach(element => {
         element.addEventListener("click", () => {
             const card = ((element.parentElement).parentElement).id;
-            
-            alert("Card con el id " + card + " ha sido eliminada");
             conexionAPI.eliminarProducto(card);
+            listarProductos();
         });
     });
 

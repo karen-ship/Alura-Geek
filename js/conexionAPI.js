@@ -31,7 +31,7 @@ async function enviarProducto(nombre, precio, imagen) {
         body: JSON.stringify({
             nombre:nombre,
             precio:`$ ${precio}`,
-            imagen:`http://127.0.0.1:5500/img/${imagen}`
+            imagen:imagen
         })
     });
 
