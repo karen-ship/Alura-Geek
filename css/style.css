@@ -1,0 +1,282 @@
+
+body, header, main, footer, section, div, article{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2{
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+}
+
+p{
+    font-family: "IBM Plex Mono", monospace;
+}
+
+/* HEADER */
+
+.header{
+    background-color: #5300C8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+}
+
+.header__container-logo{
+    height: auto;
+}
+
+.header__titulo{
+    color: #E5E5E5;
+    font-size: 24px;
+}
+
+.logo{
+    display: block;
+}
+
+/* MAIN */
+
+/* MIS PRODUCTOS */
+
+.main{
+    display: flex;
+    margin: 50px 30px;
+    padding: 60px 40px;
+    gap: 70px;
+    justify-content: center;
+}
+
+.mis-productos{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+    width: 758px;
+    align-items: center;
+}
+
+.container-productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    overflow-y: auto;
+    gap: 78px 10px;
+    max-height: 965px;
+    width: 678px;
+}
+
+.mis-productos__card{
+    background-color: #5300C8;
+    flex-grow: 1;
+    padding: 10px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+}
+
+.mis-productos__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 202px;
+}
+
+.mensaje__titulo{
+    line-height: 2.5rem;
+}
+
+.container-img{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    width: 176px;
+    height: 174px;
+    align-items: center;
+}
+
+.item__img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.container-precio-eimg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-trash{
+    cursor: pointer;
+}
+
+.item__titulo{
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.item__precio{
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* AGREGAR PRODUCTOS */
+
+.agregar-productos{
+    display: flex;
+    flex-direction: column;
+    width: 472px;
+    padding: 40px;
+    gap: 40px;
+}
+
+.agregar-productos__titulo{
+    text-align: center;
+}
+
+.agregar-productos__form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form__input{
+    height: 58px;
+    border-radius: 30px;
+    font-family: "IBM Plex Mono", monospace;
+    border: 3px solid #03318C;
+    font-weight: 600;
+    font-size: 16px;
+    padding-left: 14.5px;
+    outline: none;
+}
+
+
+.form__input::placeholder{
+    font-size: 16px;
+    color: #03318C;
+    font-weight: 600;
+}
+
+.container-buttons{
+    display: flex;
+    gap: 13px;
+}
+
+.container-buttons input{
+    flex-grow: 1;
+    height: 55px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.container-buttons input:first-child{
+    color: #FFFFFF;
+    background-color: #03318C;
+}
+
+.container-buttons input:last-child{
+    background-color: transparent;
+    border: 3px solid #03318C;
+    color: #03318C;
+}
+
+
+/* FOOTER  */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #5300C8;
+    align-items: center;
+    padding: 64px;
+    width: 100%;
+}
+
+.footer__container-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__container-logo h2{
+    color: #E5E5E5;
+    font-size: 24px;
+    padding-right: 1rem;
+}
+
+.footer__texto{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.footer__texto:first-child{
+    font-weight: 400;
+}
+
+.footer__texto:last-child{
+    font-weight: 200;
+    padding-top: .6rem;
+}
+
+/* TABLEST CELULARES */
+
+@media (max-width: 1024px){
+    body{
+        background-color: aqua;
+        width: 100%;
+    }
+
+    .main{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        gap: 50px;
+    }
+
+    .mis-productos, .agregar-productos{
+        padding: 0;
+        margin: 0;
+    }
+
+    .agregar-productos{
+        width: 100%;
+        padding: 40px;
+    }
+
+    .mis-productos{
+        width: 100%;
+    }
+
+    .container-productos{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: 20px 10px;
+        padding: 40px;
+        justify-content: space-around;
+    }
+
+     .footer__texto{
+        text-align: center;
+     }
+}
